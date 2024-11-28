@@ -22,6 +22,8 @@ async function buscarEMostrarVideos() {
         });
     } catch (error) {
         containerVideos.innerHTML = `<p>Houve um erro ao carregar os vídeos: ${error}</p>`;
-    }  
+    } finally {
+        console.log('Tentativa de carregar vídeos finalizada.');
+    }
 }
 buscarEMostrarVideos();
